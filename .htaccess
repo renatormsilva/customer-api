@@ -1,4 +1,4 @@
-    Header set Access-Control-Allow-Origin "http://localhost:3000"
+    Header set Access-Control-Allow-Origin "*"
     header set Access-Control-Allow-Credentials "true"
     header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
     header set Access-Control-Allow-Headers "Origin, Content-Type, X-Auth-Token, Authorization, Accept,charset,boundary,Content-Length"
