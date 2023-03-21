@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
@@ -54,7 +54,7 @@ if ($data) {
             if (password_verify($data['password'], $user['password'])) {
                 $conn->commit();
                 
-                session_start();
+                
                 $_SESSION['user_id'] = $user['uid'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
