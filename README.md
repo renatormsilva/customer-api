@@ -17,11 +17,11 @@ API desenvolvida utlizando a linguagem PHP, é uma ferramenta para gerenciamento
 
 2. Importe o arquivo customer-form.sql da pasta database para o seu banco de dados.
 
-3. Abra / Crie o arquivo chamado db.php com o path -> api/db.php e configure as seguintes variáveis com as informações do seu banco de dados:
+3. Abra o arquivo config.example.php, mude o nome para "config.php" e configure as seguintes variáveis com as informações do seu banco de dados:
 
     "<?php
     
-        $host = "localhost";
+        $host = "seu host";
 
         $user = "seu-usuario";
 
@@ -37,14 +37,14 @@ API desenvolvida utlizando a linguagem PHP, é uma ferramenta para gerenciamento
 
 5. Acesse a API através do navegador ou de um cliente HTTP (por exemplo, o Postman, Insomnia) utilizando a URL:
 
-    http://localhost/nome-do-repositorio/api
+    http://localhost/customer-project/api
 
 
 ## Uso
 
 A API possui os seguintes endpoints:
 
-- `GET /api/customers/readCustomers` - retorna todos os clientes cadastrados
+- `GET /api/customers/readCustomers` - retorna todos os clientes cadastrados pelo Id do usuário
 - `GET /api/customers/getOnecustomer/{id}` - retorna um cliente específico pelo ID
 - `POST /api/customers/createCustomer` - cria um novo cliente
 - `PUT /api/customers/updateCustomer` - atualiza os dados de um cliente passando o ID na requisição
