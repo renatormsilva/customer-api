@@ -5,7 +5,7 @@ header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Authorization, Accept,charset,boundary,Content-Length');
 
-include_once '../db.php';
+include_once '../../db.php';
 
 $json = file_get_contents('php://input');
 $data = json_decode($json);
@@ -28,7 +28,7 @@ $result_email->execute();
 if($result_user->rowCount() > 0 && $result_email->rowCount() > 0) {
     $response = [
         "exists" => true,
-        "message" => "Username and email already exist"
+        "message" => "Username e Email já existem"
     ];
 } else if($result_user->rowCount() > 0) {
     $response = [

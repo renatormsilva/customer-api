@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Author
 
 
 
-include_once '../db.php';
+include_once '../../db.php';
 
 $response_json = file_get_contents("php://input");
 $data =json_decode($response_json, true);

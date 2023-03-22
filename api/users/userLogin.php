@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-include_once '../db.php';
+include_once '../../db.php';
 
 $response_json = file_get_contents("php://input");
 $data = json_decode($response_json, true);
@@ -62,7 +62,7 @@ if ($data) {
                 
                 $response = [
                     "error" => false,
-                    "message" => $_SESSION['user_id'],
+                    "message" => "logado com sucesso",
                     "user" => [
                         "uid" => $user['uid'],
                         "username" => $user['username'],
@@ -70,8 +70,6 @@ if ($data) {
                     ],
                 ];
                 
-                
-               
 
             } else {
                 $conn->rollBack();
@@ -94,6 +92,8 @@ if ($data) {
             "message" => "Erro ao buscar usuário",
         ];
     }
+
+    echo json_encode($response);
 } else {
     $response = [
         "error" => true,
@@ -102,4 +102,3 @@ if ($data) {
     http_response_code(400);
 }
 
-echo json_encode($response);
