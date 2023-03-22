@@ -93,7 +93,7 @@ if ($data) {
         ];
     }
 
-    echo json_encode($response);
+    
 } else {
     $response = [
         "error" => true,
@@ -101,4 +101,4 @@ if ($data) {
     ];
     http_response_code(400);
 }
-
+echo json_encode($response);
