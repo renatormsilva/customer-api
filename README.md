@@ -12,7 +12,7 @@ API desenvolvida utlizando a linguagem PHP, é uma ferramenta para gerenciamento
 
 1. Clone este repositório para o seu computador:
 
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/renatormsilva/customer-api
 
 
 2. Importe o arquivo customer-form.sql da pasta database para o seu banco de dados.
