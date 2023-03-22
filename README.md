@@ -44,7 +44,7 @@ API desenvolvida utlizando a linguagem PHP, é uma ferramenta para gerenciamento
 
 A API possui os seguintes endpoints:
 
-- `GET /api/customers/readCustomers` - retorna todos os clientes cadastrados pelo Id do usuário
+- `GET /api/customers/readCustomers` - retorna todos os clientes cadastrados 
 - `GET /api/customers/getOnecustomer/{id}` - retorna um cliente específico pelo ID
 - `POST /api/customers/createCustomer` - cria um novo cliente
 - `PUT /api/customers/updateCustomer` - atualiza os dados de um cliente passando o ID na requisição
